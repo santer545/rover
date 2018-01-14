@@ -1,0 +1,44 @@
+html {
+	font-size: 16px;
+	@include mini-laptop {
+		font-size: 14px;
+	}
+}
+
+body,
+html {
+	height: 100px;
+}
+
+body {
+	font-size: 0.78rem;
+	font-weight: 300;
+	font-family: 'Roboto Condensed';
+	color: #000;
+	background-color: #ebecec;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container-fluid {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	height: 100%;
+	min-height: 100%;
+	min-width: 320px;
+	overflow: hidden;
+}
+
+.embed-responsive-16by9 {
+	padding-bottom: 35%;
+}

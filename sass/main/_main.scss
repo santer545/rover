@@ -1,0 +1,142 @@
+.first-section {
+	position: relative;
+    padding-top: 10%;
+    overflow: hidden;
+    background-image: url("../images/banner-effect.jpg");
+    background-repeat: no-repeat;
+    &:after {
+    	content: '';
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+    	background-color: rgba(255, 255, 255, 0.75);
+    }
+}
+
+.second-section {
+    padding-top: 95px;
+    overflow: hidden;
+}
+
+.section-text {
+	position: relative;
+	z-index: 2;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 90px 0;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    line-height: 1.2rem;
+    @include laptop {
+    	padding: 45px 0;
+    }
+}
+
+.section-img {
+    position: relative;
+    z-index: 2;
+    padding-top: 10%;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.history {
+    overflow: hidden;
+    padding-top: 95px;
+    background: url(../images/section-bg.jpg) 0 10% no-repeat, 
+                url(../images/section-bg-2.jpg) 100% 100% no-repeat;
+                
+}
+
+.thumbnails {
+    &-item {
+    	position: relative;
+    	z-index: 2;
+        @include clearfix;
+        padding-top: 10%;
+    }
+
+    &-img {
+        float: left;
+        width: 60%;
+        &--inverse {
+            float: right;
+        }
+        img,
+        iframe {
+        	width: 100%;
+        }
+    }
+    &-text {
+    	float: left;
+    	width: 40%;
+    	padding: 5% 70px 0;
+    	font-family: 'Montserrat';
+    	text-align: left;
+    	color: #656565;
+    	@include mini-laptop {
+    		padding: 5% 15px 0;
+    	}
+    }
+
+    &-heading {
+    	font-family: 'Land Rover Web';
+    	font-size: 3.625rem;
+    	line-height: 4.2rem;
+    	text-align: left;
+    	margin-bottom: 25px;
+    	text-transform: uppercase;
+    	color: #000;
+    	@include laptop {
+    		font-size: 2.625rem;
+    	}
+    	span {
+    		font-family: 'Roboto Condensed';
+    		font-size: 1rem;
+    		line-height: 1rem;
+    		text-transform: uppercase;
+    		display: block;
+    	}
+    }
+}
+
+.complect {
+	overflow: hidden;
+}
+
+.map-wrapper {
+    position: relative;
+}
+
+.contacts {
+    padding: 45px;
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    z-index: 2;
+
+    &-heading {
+        font-family: 'Land Rover Web';
+        font-size: 3.625rem;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &-h2 {
+        font-size: 1rem;
+        font-family: 'Roboto Condensed';
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+
+    &-item {
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+    }
+}

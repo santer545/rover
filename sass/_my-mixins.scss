@@ -1,0 +1,40 @@
+$screen-mobile-portret: 600px;
+
+// media points
+
+@mixin desctop {
+	@media screen and (max-width: 1919px) {
+		@content;
+	}
+}
+
+
+@mixin laptop {
+	@media screen and (max-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin mini-laptop {
+	@media screen and (max-width: $screen-md-max) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (max-width: $screen-sm-max) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (max-width: $screen-xs-max) {
+		@content;
+	}
+}
+
+@mixin mobile-portret {
+	@media screen and (max-width: $screen-mobile-portret) {
+		@content;
+	}
+}

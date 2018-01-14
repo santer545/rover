@@ -1,0 +1,75 @@
+.footer {
+	&-top {
+		position: relative;
+		padding-top: 90px;
+		padding-bottom: 70px;
+		padding-left: 110px;
+		padding-right: 110px;
+		background-image: url('../images/footer-bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		font-family: 'Montserrat';
+		color: #fff;
+		@include laptop {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		@include mini-laptop {
+			padding: 20px;
+		}
+	}
+
+	&-bottom {
+		font-family: 'Montserrat';
+		background-color: #ebecec;
+		padding-left: 110px;
+		padding-right: 110px;
+		padding-top: 45px;
+		padding-bottom: 45px;
+		@include laptop {
+			font-size: 0.6rem;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		@include mini-laptop {
+			padding: 20px;
+		}
+	}
+
+	&-logo,
+	&-info {
+		
+	}
+
+	&-right {
+		
+	}
+	&-contacts {
+		padding-top: 45px;
+		padding-bottom: 75px;
+		p {
+			margin: 0;
+		}
+	}
+
+	&-nav {
+		@extend .header-nav;
+		top: 0;
+		bottom: 0;
+		
+	}
+
+	&-social {
+		@extend .header-social;
+		position: static;
+		float: left;
+	}
+
+	&-copyright {
+		@extend .header-copyright;
+		position: static;
+		float: right;
+	}
+}
