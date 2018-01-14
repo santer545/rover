@@ -82,6 +82,12 @@
         font-size: 0.78rem;
         padding-bottom: 135px;
         transform: translate(-50%, 0);
+        cursor: pointer;
+        &:hover,
+        &:focus {
+        	color: #fff;
+        	text-decoration: none;
+        }
         &:after {
             content: '';
             position: absolute;

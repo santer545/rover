@@ -11,8 +11,53 @@
     	left: 0;
     	right: 0;
     	bottom: 0;
-    	background-color: rgba(255, 255, 255, 0.75);
+    	background-color: rgba(235, 236, 236, 0.75);
     }
+}
+
+.section-describe {
+    max-width: 410px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Montserrat';
+    color: #656565;
+    text-align: left;
+
+    a {
+        display: inline-block;
+        padding-bottom: 15px;
+        position: relative;
+        padding-top: 35px;
+        color: #000;
+        font-family: 'Roboto Condensed';
+        text-transform: uppercase;
+        &:after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background-color: #000;
+            top: 100%;
+            right: 0;
+            position: absolute;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &--inverse {
+        text-align: right;
+        right: 0;
+        left: auto;
+        .describe-heading {
+            text-align: right;
+        }
+    }
+}
+
+.describe-heading {
+    @extend .thumbnails-heading;
 }
 
 .second-section {
@@ -118,12 +163,16 @@
     top: 40px;
     left: 10%;
     z-index: 2;
+    color: #656565;
+    font-family: 'Montserrat';
+    max-width: 520px;
 
     &-heading {
         font-family: 'Land Rover Web';
         font-size: 3.625rem;
         text-transform: uppercase;
         margin-bottom: 10px;
+        color: #000;
     }
 
     &-h2 {
@@ -132,6 +181,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         margin-bottom: 25px;
+        color: #000;
     }
 
     &-item {
