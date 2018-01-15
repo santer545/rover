@@ -67,6 +67,10 @@
 		font-size: 4.25rem;
 		line-height: 4.25rem;
 	}
+	@include mobile {
+		padding-top: 80%;
+		font-size: 3.21rem;
+	}
 	span {
 		font-size: 1.56rem;
 		font-weight: 300;
@@ -75,6 +79,10 @@
 		display: block;
 		text-transform: none;
 		letter-spacing: 3px;
+		@include mobile {
+			text-transform: uppercase;
+			font-size: 0.71rem;
+		}
 	}
 }
 
@@ -124,6 +132,9 @@
 	letter-spacing: 2px;
 	padding-top: 50px;
 	text-transform: uppercase;
+	@include tablet {
+		padding-top: 0;
+	}
 	&:after {
 		content: '';
 		position: absolute;
@@ -133,5 +144,8 @@
 		background-color: #787878;
 		height: 93px;
 		z-index: 0;
+		@include tablet {
+			display: none;
+		}
 	}
 }

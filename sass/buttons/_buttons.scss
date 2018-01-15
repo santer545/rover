@@ -1,0 +1,33 @@
+.btn {
+	font-family: 'Montserrat SemiBold';
+	font-size: 1.14rem;
+	border-radius: 0;
+	transition: background-color 0.3s, color 0.3s;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	&:focus,
+	&:active:focus {
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+.btn-success {
+	background-color: #000;
+	border-color: #000;
+	color: #fff;
+	&:hover,
+	&:focus,
+	&:active:focus,
+	&:active {
+		background-color: #fff;
+		color: #000;
+		border-color: #000;
+	}
+}
+
+.btn-lg {
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+}

@@ -1,9 +1,10 @@
 $(document).ready(function() {
-    gumburgerButtonAnimate();
 
+    gumburgerButtonAnimate();
 
     scrollDown();
 
+    maskedInput();
 
 });
 
@@ -25,4 +26,9 @@ function scrollDown() {
         e.preventDefault();
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 300, 'linear');
     });
+}
+
+function maskedInput() {
+    //phone 
+    $('input[type=tel]').mask("+99(999)999-9999");
 }

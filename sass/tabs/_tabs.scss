@@ -1,5 +1,8 @@
 .tabs-wrapper {
     padding-top: 92px;
+    @include tablet {
+        padding-top: 0;
+    }
 }
 
 .nav-tabs {
@@ -88,4 +91,19 @@
 		font-family: 'Montserrat';
 		text-transform: uppercase;
 	}
+}
+
+.tabs {
+    .nav-tabs {
+        & > li {
+            @include mobile {
+                display: none;
+                width: 50%;
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                display: block;
+            }
+        }
+    }
 }

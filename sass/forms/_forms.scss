@@ -1,0 +1,35 @@
+.form {
+	&-control {
+		height: 34px;
+		border: 1px solid #818181;
+		background-color: #fff;
+		padding: 10px 23px;
+		line-height: 34px;
+		text-transform: uppercase;
+		font-family: 'Montserrat';
+		font-size: 1.14rem;
+		border-radius: 0;
+		letter-spacing: 2px;
+
+		@include placeholder(#d3d3d3);
+
+		&:focus,
+		&:active:focus {
+			outline: none;
+			box-shadow: none;
+			border: 1px solid #818181;
+		}
+
+	}
+
+	&-group {
+		margin-bottom: 14px;
+	}
+}
+
+.has-error {
+	.form-control {
+		border: 1px solid #ff0000;
+		@include placeholder(#ff0000);
+	}
+}

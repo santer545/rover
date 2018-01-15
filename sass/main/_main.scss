@@ -1,17 +1,24 @@
 .first-section {
-	position: relative;
+    position: relative;
     padding-top: 10%;
     overflow: hidden;
     background-image: url("../images/banner-effect.jpg");
     background-repeat: no-repeat;
+    @include tablet {
+        padding-top: 20px;
+        background-image: none;
+    }
     &:after {
-    	content: '';
-    	position: absolute;
-    	top: 0;
-    	left: 0;
-    	right: 0;
-    	bottom: 0;
-    	background-color: rgba(235, 236, 236, 0.75);
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(235, 236, 236, 0.75);
+        @include tablet {
+            display: none;
+        }
     }
 }
 
@@ -23,6 +30,31 @@
     font-family: 'Montserrat';
     color: #656565;
     text-align: left;
+    padding-right: 20px;
+
+    @include tablet {
+        position: relative;
+        text-align: center;
+        max-width: none;
+        padding: 0 60px 60px;
+    }
+    @include mobile {
+        padding-bottom: 20px;
+        margin-bottom: 80px;
+    }
+
+    &:after {
+        @include tablet {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 1px;
+            background-color: #787878;
+            height: 150px;
+            z-index: 0;
+        }
+    }
 
     a {
         display: inline-block;
@@ -46,28 +78,38 @@
         }
     }
 
+    p {
+        margin: 0;
+    }
+
     &--inverse {
         text-align: right;
         right: 0;
         left: auto;
+        padding-left: 20px;
+        padding-right: 0;
+        @include tablet {
+            padding-right: 0;
+            padding-left: 25%;
+        }
         .describe-heading {
             text-align: right;
         }
     }
 }
 
-.describe-heading {
-    @extend .thumbnails-heading;
-}
 
 .second-section {
     padding-top: 95px;
     overflow: hidden;
+    @include tablet {
+        padding-top: 80px;
+    }
 }
 
 .section-text {
-	position: relative;
-	z-index: 2;
+    position: relative;
+    z-index: 2;
     max-width: 50%;
     margin: 0 auto;
     padding: 90px 0;
@@ -75,7 +117,22 @@
     font-size: 0.78rem;
     line-height: 1.2rem;
     @include laptop {
-    	padding: 45px 0;
+        padding: 45px 0;
+    }
+    @include tablet {
+        max-width: none;
+        padding: 0 45px 20px;
+        margin-bottom: 80px;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 1px;
+            background-color: #787878;
+            height: 150px;
+            z-index: 0;
+        }
     }
 }
 
@@ -85,74 +142,161 @@
     padding-top: 10%;
     padding-bottom: 20px;
     overflow: hidden;
+    @include tablet {
+        padding-top: 0;
+    }
+    .img-wrapper {
+        @include tablet {
+            margin-right: -126%;
+        }
+    }
+    &--inverse {
+        .img-wrapper {
+            @include tablet {
+                margin-left: -75%;
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 .history {
     overflow: hidden;
     padding-top: 95px;
-    background: url(../images/section-bg.jpg) 0 10% no-repeat, 
-                url(../images/section-bg-2.jpg) 100% 100% no-repeat;
-                
+    background: url(../images/section-bg.jpg) 0 10% no-repeat,
+    url(../images/section-bg-2.jpg) 100% 100% no-repeat;
+    @include tablet {
+        padding-top: 30px;
+    }
+    .section-text {
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .thumbnails {
     &-item {
-    	position: relative;
-    	z-index: 2;
+        position: relative;
+        z-index: 2;
         @include clearfix;
         padding-top: 10%;
+        @include tablet {
+            padding-top: 0;
+            padding-bottom: 5%;
+        }
     }
 
     &-img {
         float: left;
         width: 60%;
+        @include mobile {
+            width: 100%;
+            float: none;
+        }
         &--inverse {
             float: right;
         }
         img,
         iframe {
-        	width: 100%;
+            width: 100%;
         }
     }
     &-text {
-    	float: left;
-    	width: 40%;
-    	padding: 5% 70px 0;
-    	font-family: 'Montserrat';
-    	text-align: left;
-    	color: #656565;
-    	@include mini-laptop {
-    		padding: 5% 15px 0;
-    	}
+        float: left;
+        width: 40%;
+        padding: 5% 70px 0;
+        font-family: 'Montserrat';
+        text-align: left;
+        color: #656565;
+        @include mini-laptop {
+            padding: 5% 15px 0;
+        }
+        @include tablet {
+            padding-top: 2%;
+        }
+        @include mobile {
+            width: 100%;
+            float: none;
+        }
     }
 
     &-heading {
-    	font-family: 'Land Rover Web';
-    	font-size: 3.625rem;
-    	line-height: 4.2rem;
-    	text-align: left;
-    	margin-bottom: 25px;
-    	text-transform: uppercase;
-    	color: #000;
-    	@include laptop {
-    		font-size: 2.625rem;
-    	}
-    	span {
-    		font-family: 'Roboto Condensed';
-    		font-size: 1rem;
-    		line-height: 1rem;
-    		text-transform: uppercase;
-    		display: block;
-    	}
+        font-family: 'Land Rover Web';
+        font-size: 3.625rem;
+        line-height: 4.2rem;
+        text-align: left;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        color: #000;
+        @include laptop {
+            font-size: 2.625rem;
+        }
+        @include tablet {
+            font-size: 2rem;
+        }
+        span {
+            font-family: 'Roboto Condensed';
+            font-size: 1rem;
+            line-height: 1rem;
+            text-transform: uppercase;
+            display: block;
+        }
     }
 }
 
+
+.describe-heading {
+    @extend .thumbnails-heading;
+    @include tablet {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    @include mobile {
+        line-height: 2rem;
+    }
+    &--inverse {
+        @include tablet {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                width: 1px;
+                background-color: #787878;
+                height: 150px;
+                z-index: 0;
+            }
+        }
+    }
+    span {
+        @include mobile {
+            line-height: 1.8rem;
+        }
+    }
+}
+
+
+
 .complect {
-	overflow: hidden;
+    overflow: hidden;
+    .section-text {
+        @include tablet {
+            margin-bottom: 0;
+            padding-top: 40px;
+        }
+        &:after {
+            display: none;
+        }
+    }
 }
 
 .map-wrapper {
     position: relative;
+    @include tablet {
+        text-align: center;
+    }
 }
 
 .contacts {
@@ -166,6 +310,18 @@
     color: #656565;
     font-family: 'Montserrat';
     max-width: 520px;
+    @include tablet {
+        position: static;
+        display: block;
+        max-width: none;
+        width: calc(100% - 50px);
+        margin: 0 auto;
+        padding: 45px 45px 0;
+    }
+
+    @include mobile {
+        padding: 25px 15px 0;
+    }
 
     &-heading {
         font-family: 'Land Rover Web';
@@ -188,5 +344,74 @@
         &:not(:last-child) {
             margin-bottom: 60px;
         }
+        &:first-of-type {
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+    &-mobile-description {
+        margin: 20px 0 25px;
+    }
+
+    .form-group {
+        &--margin {
+            margin: 0 -15px;
+        }
+    }
+
+    .btn-lg {
+        width: 100%;
+    }
+}
+
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.plus {
+    position: absolute;
+    @include mobile {
+        width: 30px;
+    }
+    &-1 {
+        top: 0;
+        left: 40%;
+        @include mobile {
+            top: 30px;
+            left: 38%;
+        }
+    }
+    &-2 {
+        top: 75%;
+        left: 45%;
+        @include mobile {
+            left: 40%;
+        }
+    }
+    &-3 {
+        top: 22%;
+        right: 30%;
+    }
+    &-4 {
+        left: 20%;
+        top: 24%;
+    }
+    &-5 {
+        top: 10px;
+        left: 20%;
+    }
+    &-6 {
+        top: 70%;
+        left: 25%;
+    }
+    &-8 {
+        top: 20px;
+        right: 25%;
+    }
+    &-7 {
+        top: 30%;
+        right: 20%;
     }
 }

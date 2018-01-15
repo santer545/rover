@@ -3,13 +3,26 @@
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-
+    @include tablet {
+        background-position: center;
+    }
     &-left {
         padding-top: 35px;
         padding-left: 110px;
         float: left;
         @include laptop {
-        	padding-left: 50px;
+            padding-left: 50px;
+        }
+        @include mobile {
+            float: none;
+            display: block;
+            padding-left: 0;
+            text-align: center;
+        }
+        img {
+            @include mobile {
+                max-width: 100px;
+            }
         }
     }
 
@@ -18,7 +31,13 @@
         padding-top: 35px;
         padding-right: 110px;
         @include laptop {
-        	padding-right: 50px;
+            padding-right: 50px;
+        }
+        @include mobile {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            padding-right: 0;
         }
     }
 
@@ -30,18 +49,33 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         color: #fff;
+        @include tablet {
+            bottom: 30px;
+        }
+        @include mobile {
+            display: none;
+        }
     }
     &-social {
         position: absolute;
         bottom: 75px;
         left: 5%;
         color: #fff;
+        @include tablet {
+            bottom: 30px;
+        }
+        @include mobile {
+            display: none;
+        }
         span {
             font-size: 0.78rem;
             text-transform: uppercase;
             display: inline-block;
             vertical-align: middle;
             margin-right: 25px;
+            @include tablet {
+                margin-right: 10px;
+            }
         }
 
         ul {
@@ -61,6 +95,9 @@
             float: left;
             &:not(:last-child) {
                 margin-right: 25px;
+                @include tablet {
+                    margin-right: 10px;
+                }
             }
         }
 
@@ -83,10 +120,13 @@
         padding-bottom: 135px;
         transform: translate(-50%, 0);
         cursor: pointer;
+        @include mobile {
+            padding-bottom: 80px;
+        }
         &:hover,
         &:focus {
-        	color: #fff;
-        	text-decoration: none;
+            color: #fff;
+            text-decoration: none;
         }
         &:after {
             content: '';
@@ -96,34 +136,43 @@
             left: 50%;
             width: 1px;
             background-color: #fff;
+            @include mobile {
+                height: 60px;
+            }
         }
     }
 }
 
 .banner-logo {
     margin-bottom: 60px;
+    @include mobile {
+        display: none;
+    }
 }
 
 .top-banner {
-	@include tablet {
-		padding-top: 10%;
-	}
+    @include tablet {
+        padding-top: 10%;
+    }
 }
 
 .lang {
-	position: relative;
-	z-index: 2;
-	display: inline-block;
-	vertical-align: middle;
-	padding: 0;
-	margin: 0;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
     list-style-type: none;
     li {
         display: inline-block;
         vertical-align: middle;
         margin-right: 30px;
         @include mini-laptop {
-        	margin-right: 20px;
+            margin-right: 20px;
+        }
+        @include mobile {
+            margin-right: 10px;
         }
     }
     a {
@@ -154,6 +203,9 @@
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
+    @include mobile {
+        width: 40px;
+    }
 }
 
 #nav-icon2 span,
@@ -180,6 +232,9 @@
 #nav-icon2 span:nth-child(1) {
     top: 0px;
     width: 40px;
+    @include mobile {
+        width: 32px;
+    }
 }
 
 #nav-icon3 span:nth-child(2),
@@ -226,70 +281,73 @@
 }
 
 .header-nav {
-	position: absolute;
-	width: 520px;
-	height: 100vh;
-	padding-right: 113px;
-	padding-top: 110px;
-	background-color: rgba(0,0,0, 0.68);
-	top: 0;
-	bottom: 0;
-	right: 0;
-	transform: translate(520px, 0);
-	transition: transform 0.3s;
-	@include laptop {
-		padding-right: 50px;
-	}
-	&.active {
-		transform: translate(0, 0);
-	}
+    position: absolute;
+    width: 520px;
+    height: 100vh;
+    padding-right: 113px;
+    padding-top: 110px;
+    background-color: rgba(0, 0, 0, 0.68);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: translate(540px, 0);
+    transition: transform 0.3s;
+    @include laptop {
+        padding-right: 50px;
+    }
+    @include mobile {
+        width: 100%;
+    }
+    &.active {
+        transform: translate(0, 0);
+    }
 
-	ul {
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
-		li {
-			text-align: right;
-			margin-bottom: 75px;
-			@include desctop {
-				margin-bottom: 30px;
-			}
-			a,
-			span {
-				color: #fff;
-				font-family: 'Montserrat';
-				font-size: 1.06rem;
-				text-transform: uppercase;
-				display: inline-block;
-				padding-bottom: 20px;
-				position: relative;
-				&:after {
-					content: '';
-					position: absolute;
-					top: 100%;
-					right: 0;
-					width: 0;
-					height: 1px;
-					background-color: #fff;
-					transition: width 0.3s;
-				}
-			}
-			&.active,
-			&:hover {
-				a,
-				span {
-					text-decoration: none;
-					&:after {
-						width: 40px;
-					}
-				}
-			}
-			&.active {
-				a,
-				span {
-					font-family: 'Montserrat SemiBold';
-				}
-			}
-		}
-	}
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            text-align: right;
+            margin-bottom: 75px;
+            @include desctop {
+                margin-bottom: 30px;
+            }
+            a,
+            span {
+                color: #fff;
+                font-family: 'Montserrat';
+                font-size: 1.06rem;
+                text-transform: uppercase;
+                display: inline-block;
+                padding-bottom: 20px;
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: #fff;
+                    transition: width 0.3s;
+                }
+            }
+            &.active,
+            &:hover {
+                a,
+                span {
+                    text-decoration: none;
+                    &:after {
+                        width: 40px;
+                    }
+                }
+            }
+            &.active {
+                a,
+                span {
+                    font-family: 'Montserrat SemiBold';
+                }
+            }
+        }
+    }
 }
