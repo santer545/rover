@@ -27,6 +27,9 @@ img {
 .container-fluid {
 	max-width: 1600px;
 	margin: 0 auto;
+	@include mobile {
+		padding: 0 25px;
+	}
 }
 
 .wrapper {
@@ -40,5 +43,14 @@ img {
 }
 
 .embed-responsive-16by9 {
-	padding-bottom: 35%;
+	padding-bottom: 28.7%;
+	@include desctop {
+		padding-bottom: 36%;
+	}
+	@include laptop {
+		padding-bottom: 40%;
+	}
+	@include mobile {
+		padding-bottom: 56.25%;
+	}
 }

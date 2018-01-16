@@ -15,7 +15,7 @@
         }
 
         a {
-            padding: 40px 20px;
+            padding: 37px 20px;
             margin: 0;
             font-size: 0.78rem;
             color: #8a8a8a;
@@ -24,10 +24,16 @@
             background-color: #fff;
             border: none;
             border-radius: 0;
+            letter-spacing: 3px;
             transition: background-color 0.3s;
             @include mini-laptop {
             	padding: 25px 15px;
             	font-size: 0.7rem;
+            }
+            @include mobile {
+                padding: 20px 15px;
+                font-size: .6rem;
+                letter-spacing: 2px;
             }
         }
         &.active {
@@ -58,7 +64,7 @@
 
 .product {
 	&-list {
-		padding: 5% 0;
+		padding: 6% 0;
 		@include tablet {
 			padding-bottom: 0;
 		}
@@ -72,17 +78,29 @@
 	}
 	&-heading {
 		@extend .thumbnails-heading;
+        
 		text-align: center;
+        margin-bottom: 20px;
+        span {
+            line-height: 2.1rem;
+            letter-spacing: 2px;
+            @include mobile {
+                &:before {
+                    display: none;
+                }
+            }
+        }
 	}
 
 	&-img {
-		margin-bottom: 60px;
+		margin-bottom: 51px;
 		@include tablet {
 			margin-bottom: 20px;
 		}
 	}
 	&-text {
 		font-size: 0.625rem;
+        line-height: 0.7rem;
 		max-width: 250px;
 		margin: 0 auto 15px;
 	}

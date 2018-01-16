@@ -12,7 +12,15 @@
     <div class="wrapper">
         <main id="main">
             //= header.html
-            <section class="first-section text-center" id="section-1">
+            <div class="mobile-banner">
+                <div class="mobile-item" style="background-image: url(images/mobile-banner-1.jpg);">
+                    <div class="mobile-heading">design</div>
+                </div>
+                <div class="mobile-item" style="background-image: url(images/mobile-banner-2.jpg);">
+                    <div class="mobile-heading">inside</div>
+                </div>
+            </div>
+            <section class="first-section text-center" id="section-1"  data-parallax="scroll" data-image-src="images/banner-effect.jpg">
                 <div class="container-fluid">
                     <div class="hidden-xs hidden-sm">
                         <div class="heading-h1">Velar 2018 <span>design & technologies</span></div>
@@ -82,13 +90,17 @@
                     <div class="section-text">Чтобы сохранить в тайне прототип первого в истории Range Rover (1969), дизайнеры и конструкторы, трудившиеся над этим революционным автомобилем, назвали его ‘Velar ’, от итальянского ‘velare’ — «окутывать» или «вуалировать». На первые 26 прототипов был даже установлен бейдж с тем же логотипом, чтобы скрыть принадлежность бренду.</div>
                     <div class="heading-description heading-description--big hidden-xs hidden-sm">ознакомтесь с основными возможностями</div>
                 </div>
-                <div class="describe-heading visible-xs">INGENIUM <span>Двигатель</span></div>
-                <div class="container-fluid">
+                <div class="describe-heading visible-xs">INSIDE <span>Двигатель</span></div>
+                <div class="container-fluid animatedParent">
                     <div class="thumbnails-item">
-                        <div class="thumbnails-img">
+                        <div class="thumbnails-img animated fadeInLeft" data-id='1'>
+                            <img src="images/number-mobile-1.png" alt="" class="thumbnails-number-mobile">
                             <img src="images/article-1.jpg" alt="">
                         </div>
-                        <div class="thumbnails-text">
+                        <div class="thumbnails-text animated fadeInRight" data-id='2'>
+                            <div class="thumbnails-number">
+                                <img src="images/number-1.png" alt="">
+                            </div>
                             <div class="thumbnails-heading">
                                 возможности <span>на бездорожье</span>
                             </div>
@@ -96,31 +108,44 @@
                         </div>
                     </div>
                     <div class="thumbnails-item">
-                        <div class="thumbnails-img thumbnails-img--inverse">
+                        <div class="thumbnails-img thumbnails-img--inverse animated fadeInLeft" data-id='3'>
+                            <img src="images/number-mobile-2.png" alt="" class="thumbnails-number-mobile thumbnails-number-mobile--inverse">
                             <img src="images/article-2.jpg" alt="">
                         </div>
-                        <div class="thumbnails-text">
+                        <div class="thumbnails-text fadeInRight animated" data-id='4'>
+                            <div class="thumbnails-number thumbnails-number--inverse">
+                                <img src="images/number-2.png" alt="">
+                            </div>
                             <div class="thumbnails-heading">глубина <span>преодолеваемого брода</span></div>
                             Range Rover Velar отличается превоходными характеристиками. Его дорожный просвет состовляет 251* мм, угол продольной необходимости - 20,1*, а угол сьезда - 26,3*.Обтекаемая панель пола предотвращает получение повреждений, а дифференциал с электронным управлением может обеспечивать отличное сцепление даже в самых сложных условиях.
                         </div>
                     </div>
                     <div class="thumbnails-item">
-                        <div class="thumbnails-img">
+                        <div class="thumbnails-img animated fadeInLeft" data-id='5'>
+                            <img src="images/number-mobile-3.png" alt="" class="thumbnails-number-mobile">
                             <img src="images/article-4.jpg" alt="">
                         </div>
-                        <div class="thumbnails-text">
+                        <div class="thumbnails-text animated fadeInRight" data-id='6'>
+                            <div class="thumbnails-number">
+                                <img src="images/number-3.png" alt="">
+                            </div>
                             <div class="thumbnails-heading">буксировка <span>грузов</span></div>
                             Range Rover Velar отличается превоходными характеристиками. Его дорожный просвет состовляет 251* мм, угол продольной необходимости - 20,1*, а угол сьезда - 26,3*.Обтекаемая панель пола предотвращает получение повреждений, а дифференциал с электронным управлением может обеспечивать отличное сцепление даже в самых сложных условиях.
                         </div>
                     </div>
-                    <div class="thumbnails-item">
-                        <div class="thumbnails-img thumbnails-img--inverse embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/tFHxGETa7Kg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        </div>
-                        <div class="thumbnails-text">
+                    <div class="thumbnails-item thumbnails-item--awards">
+                        <div class="thumbnails-text animated fadeInLeft" data-id='7'>
+                            <div class="thumbnails-number thumbnails-number--inverse">
+                                <img src="images/awards.png" alt="">
+                            </div>
                             <div class="thumbnails-heading">BORN Awards’18 <span>Land Rover</span></div>
                             The Land Rover BORN Awards is an annual competition celebrating exceptional creative achievements in design. Through exhibition, celebration and conversation, the Awards provide winners with an opportunity for international recognition and exposure to business and industry leaders.
                         </div>
+
+                        <div class="thumbnails-img thumbnails-img--inverse embed-responsive embed-responsive-16by9 animated fadeInRight" data-d="8">
+                            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/tFHxGETa7Kg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        
                     </div>
                 </div>
             </section>
@@ -185,13 +210,14 @@
             <section class="map-wrapper">
                 <div class="contacts">
                     <div class="contacts-heading">услуги</div>
-                    <div class="contacts-item visible-md">
+                    <div class="contacts-item visible-md visible-lg">
                         <div class="contacts-h2">ближайший салон range rover</div>
                         Вы можете заказать автомобиль в ближайшем салоне Range Rover.</div>
                     <div class="contacts-item">
                         <div class="contacts-h2">гарантийное обслуживание</div>
                         Вы можете дополнительное гарантийное обслуживание. Позвоните нам или оставьте заявку, чтобы узнать как то сделать.
                     </div>
+                    <a role="button" class="hidden-xs hidden-sm" type="button" data-toggle="modal" data-target="#myModal">Оставить заявку</a>
                     <form action="#" class="form js_validate visible-xs visible-sm">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Ваше имя" required>
@@ -211,8 +237,4 @@
             </section>
         </main>
         //= footer.html
-    </div>
-    <script src="js/all.min.js"></script>
-</body>
-
-</html>
+    

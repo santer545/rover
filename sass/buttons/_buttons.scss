@@ -30,4 +30,7 @@
 	height: 50px;
 	line-height: 50px;
 	padding: 0 20px;
+	@include mobile {
+		font-size: 0.57rem;
+	}
 }

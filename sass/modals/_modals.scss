@@ -1,0 +1,30 @@
+.modal {
+	&-body,
+	&-header {
+		padding: 30px;
+		.btn-lg {
+			width: 100%;
+		}
+	}
+
+	&-dialog {
+		margin-top: 100px;
+		&.modal-xs {
+			width: 400px;
+		}
+	}
+}
+
+.close {
+	position: absolute;
+	top: -30px;
+	right: 0;
+	color: #fff;
+	opacity: 1;
+	&:hover {
+		color: #fff;
+	}
+	&:focus {
+		outline: none;
+	}
+}

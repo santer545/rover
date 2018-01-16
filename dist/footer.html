@@ -1,6 +1,20 @@
 <footer class="footer">
     <div class="footer-top">
         <div class="footer-nav">
+            <div class="footer-right">
+                <ul class="lang">
+                    <li><a href="#">RU</a></li>
+                    <li><a href="#">En</a></li>
+                </ul>
+                <div class="gamburger-menu">
+                    <div id="nav-icon4" class="open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
             <ul>
                 <li><a href="#">обзор</a></li>
                 <li class="active"><span>о компании</a></span>
@@ -85,10 +99,44 @@
                 <p>ООО "Ягуар Ленд Ровер" - официальный сайт Land Rover в России</p>
                 <p>Приведенные данные являются результатом испытаний, проведенных официальным производителем в соответствии с законодательством ЕС, и используются только для целей сравнения. Фактическое потребление топлива транспортным средством может отличаться от данных, достигнутых в результате таких тестов.</p>
             </div>
-            <div class="col-sm-3 text-center">
+            <div class="col-sm-3 text-center footer-artjoker">
                 <p>Разработка и поддержка сайта:</p>
                 <img src="images/artjoker.png" alt="">
             </div>
         </div>
     </div>
 </footer>
+<a class="to-top js-to-top">
+    <img src="images/up.png" alt="">
+</a>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-xs" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-header">
+                
+                <h4 class="modal-title" id="myModalLabel">Ваши контактные данные:</h4>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form js_validate">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" data-validate="phone" class="form-control" placeholder="Номер телефона" required>
+                        </div>
+                        <div class="form-group form-group--margin">
+                            <button class="btn btn-success btn-lg hidden-xs hidden-sm" type="submit">оставить заявку</button>
+                        </div>
+                    </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>
+<script src="js/all.min.js"></script>
+</body>
+
+</html>

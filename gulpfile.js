@@ -68,17 +68,11 @@ gulp.task('scripts', function() {
     return gulp.src([
             sourceDir + '/jquery-2.2.1.min.js',
             sourceDir + '/bootstrap.js',
-            sourceDir + '/moment.js',
-            sourceDir + '/bootstrap-select.js',
-            sourceDir + '/bootstrap-datetimepicker.js',
             sourceDir + '/validate.js',
             sourceDir + '/jquery.maskedinput.js',
-            sourceDir + '/jquery.awesome-cursor.js',
-            sourceDir + '/swiper.js',
-            sourceDir + '/masonry.js',
+            sourceDir + '/css3-animate-it.js',
             sourceDir + '/jquery.dotdotdot.js',
-            sourceDir + '/lightbox.js',
-            sourceDir + '/star-rating.js',
+            sourceDir + '/parallax.js',
             sourceDir + '/main.js'
         ])
 

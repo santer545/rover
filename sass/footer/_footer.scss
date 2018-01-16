@@ -3,8 +3,8 @@
 		position: relative;
 		padding-top: 90px;
 		padding-bottom: 70px;
-		padding-left: 110px;
-		padding-right: 110px;
+		padding-left: 71px;
+		padding-right: 71px;
 		background-image: url('../images/footer-bg.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -17,6 +17,10 @@
 		@include mini-laptop {
 			padding: 20px;
 		}
+		@include mobile {
+			padding-top: 36px;
+			padding-bottom: 33px;
+		}
 	}
 
 	&-bottom {
@@ -26,6 +30,7 @@
 		padding-right: 110px;
 		padding-top: 45px;
 		padding-bottom: 45px;
+		color: #b5b5b5;
 		@include laptop {
 			font-size: 0.6rem;
 			padding-top: 20px;
@@ -36,21 +41,65 @@
 		@include mini-laptop {
 			padding: 20px;
 		}
+		@include mobile {
+			text-align: center;
+			padding: 25px;
+			font-size: 0.36rem;
+		}
 	}
 
-	&-logo,
 	&-info {
-		
+		padding-right: 40px;
+		@include mobile {
+			text-align: center;
+			font-size: 0.43rem;
+			line-height: 1rem;
+			padding-right: 0;
+		}
+	}
+
+	&-logo {
+		display: block;
+		@include mobile {
+			text-align: center;
+			padding-bottom: 26px;
+		}
+		img {
+			@include mobile {
+				max-width: 160px;
+			}
+		}
 	}
 
 	&-right {
-		
+		@include mobile {
+			display: none;
+		}
 	}
 	&-contacts {
-		padding-top: 45px;
+		padding-top: 55px;
 		padding-bottom: 75px;
+		font-size: 1.1rem;
+		line-height: 2rem;
+		@include mobile {
+			padding-bottom: 46px;
+			padding-top: 31px;
+			font-size: 0.57rem;
+			line-height: 1.1rem;
+		}
 		p {
 			margin: 0;
+		}
+	}
+
+	&-artjoker {
+		@include mobile {
+			padding-top: 30px;
+		}
+		img {
+			@include mobile {
+				max-width: 62px;
+			}
 		}
 	}
 
@@ -58,18 +107,60 @@
 		@extend .header-nav;
 		top: 0;
 		bottom: 0;
-		
+		position: fixed;
+		z-index: 5;
+		padding-top: 30px;
+		background-color: rgba(0, 0, 0, 0.88);
+		.footer-right {
+			text-align: right;
+			margin-bottom: 40px;
+		}
+		.lang {
+			vertical-align: middle;
+			li {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&-social {
 		@extend .header-social;
 		position: static;
 		float: left;
+		@include mobile {
+			display: block;
+			width: 100%;
+			float: none;
+			text-align: center;
+			margin-bottom: 13px;
+		}
+		li {
+			width: 26px;
+			height: 24px;
+			@include mobile {
+				display: inline-block;
+				vertical-align: top;
+			}
+			&:not(:last-child) {
+				margin-right: 25px;
+			}
+		}
+		span {
+			@include mobile {
+				display: none;
+			}
+		}
 	}
 
 	&-copyright {
 		@extend .header-copyright;
 		position: static;
 		float: right;
+		@include mobile {
+			display: block;
+			font-size: 0.43rem;
+			float: none;
+			text-align: center;
+		}
 	}
 }
