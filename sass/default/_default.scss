@@ -50,6 +50,9 @@ img {
 	@include laptop {
 		padding-bottom: 40%;
 	}
+	@include mini-laptop {
+		padding-bottom: 50%;
+	}
 	@include mobile {
 		padding-bottom: 56.25%;
 	}
