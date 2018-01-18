@@ -1,0 +1,17 @@
+.slider-prev,
+.slider-next {
+	position: absolute;
+	top: 10px;
+	left: 10%;
+	font-size: 1.5rem;
+	z-index: 3;
+}
+
+.slick-initialized .slick-slide {
+	outline: none;
+}
+
+.slider-next {
+	left: auto;
+	right: 10%;
+}

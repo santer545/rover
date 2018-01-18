@@ -68,8 +68,11 @@
 		line-height: 4.25rem;
 	}
 	@include mobile {
-		padding-top: 50%;
+		padding-top: 0%;
 		font-size: 3.21rem;
+	}
+	@include mobile-portret {
+		padding-top: 50%;
 	}
 	span {
 		font-size: 1.86rem;

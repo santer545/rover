@@ -162,6 +162,12 @@
     @include tablet {
         padding-top: 10%;
     }
+    @include mobile {
+        padding-top: 5%;
+    }
+    @include mobile-portret {
+        padding-top: 10%;
+    }
 }
 
 .lang {

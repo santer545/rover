@@ -1,5 +1,6 @@
 @import 'plugins/bootstrap/_bootstrap.scss';
 @import 'plugins/font-awesome/font-awesome.scss';
+@import 'plugins/slick/slick.scss';
 @import '_my-mixins.scss';
 
 @import 'default/_default.scss';
@@ -12,3 +13,4 @@
 @import 'buttons/_buttons.scss';
 @import 'modals/_modals.scss';
 @import 'animations/_animations.scss';
+@import 'custom-plugin/_custom-slick.scss';

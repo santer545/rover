@@ -73,6 +73,7 @@ gulp.task('scripts', function() {
             sourceDir + '/css3-animate-it.js',
             sourceDir + '/jquery.dotdotdot.js',
             sourceDir + '/parallax.js',
+            sourceDir + '/slick.js',
             sourceDir + '/main.js'
         ])
 
