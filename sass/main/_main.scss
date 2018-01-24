@@ -580,6 +580,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .img-wrapper {
     position: relative;
     display: inline-block;
+    transition: transform 0.3s;
 }
 
 .plus {
