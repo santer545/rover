@@ -29,6 +29,7 @@
             @include mini-laptop {
             	padding: 25px 15px;
             	font-size: 0.7rem;
+                letter-spacing: 0;
             }
             @include mobile {
                 padding: 20px 15px;
@@ -59,7 +60,9 @@
     }
 }
 
-.tab-content {
+.tab-pane-wrapper {
+    padding: 50px 40px;
+    font-size: 1.1rem;
 }
 
 .product {
